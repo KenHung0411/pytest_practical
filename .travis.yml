@@ -2,7 +2,8 @@ language: python
 python:
   - "3.6"
 install:
-  - pip install -e .
+  - pip install pytest
+  - pip install numpy
   - pip install pytest-cov codecov # Install packages for code coverage report
 script:
   - pytest tests # Point to the source directory
