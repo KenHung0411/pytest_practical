@@ -1,0 +1,23 @@
+## To run all test files
+pytest  # auto run all the test files under folder "tests"
+
+## Stop testing when failure
+pytest -x
+
+##  run all the tests in this test class using node IDs
+pytest models/test_train.py::TestSplitIntoTrainingAndTestingSets
+or 
+pytest models/test_train.py::TestSplitIntoTrainingAndTestingSets::test_on_six_rows
+
+
+## Test by using key words
+pytest -k "SplitInto"
+
+## only show the reason for expected failures in the test result report
+pytest -rx
+
+##  only show the reason for skipped tests in the test result report
+pytest -rs
+
+## show the reason for both skipped tests and tests that are expected to fail in the test result report
+pytest -rsx
